@@ -4,7 +4,7 @@
 
 | Campo | Información |
 |---|---|
-| Nombre | TU NOMBRE Y APELLIDOS AQUÍ |
+| Nombre | MARIO JIMENEZ VISPE |
 | Curso | 2º ASIR |
 | Módulo | 0377 · Administración de Sistemas Gestores de Bases de Datos |
 | Reto | Despliegue y operación de un servidor Oracle aislado |
