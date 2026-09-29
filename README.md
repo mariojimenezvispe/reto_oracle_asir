@@ -1,7 +1,7 @@
 # Reto — Despliegue y Operación de un Servidor Oracle Aislado
 
 ## 1. Datos del alumno
-
+ 
 | Campo | Información |
 |---|---|
 | Nombre | MARIO JIMENEZ VISPE |
