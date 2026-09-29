@@ -34,9 +34,6 @@ Durante el asistente se configuraron la ruta de instalación (Oracle Home), el p
 
 > Las contraseñas **no se publican** en este repositorio. Solo se documenta que fueron configuradas.
 
-### Evidencia 1 — Servicios Oracle tras la instalación
-
-![Evidencia 1 - Instalación](img/evidencia_01_instalacion.png)
 
 ## 6. Incidencia 1 — Caída local (ORA-12560)
 
@@ -49,13 +46,6 @@ Método: **observar → formular hipótesis → comprobar → solucionar → ver
 5. Solución: se **inicia** de nuevo el servicio.
 6. Verificación: se repite la conexión con SQL*Plus y funciona.
 
-### Evidencia 2 — Servicio detenido
-
-![Evidencia 2 - Servicio detenido](img/evidencia_02_servicio_detenido.png)
-
-### Evidencia 3 — Error ORA-12560
-
-![Evidencia 3 - ORA-12560](img/evidencia_03_ora12560.png)
 
 ## 7. Incidencia 2 — El muro de red
 
@@ -68,9 +58,6 @@ curl http://192.168.56.103:1521
 
 Resultado: el `ping` responde pero el puerto 1521 falla → **conectividad IP no significa disponibilidad del servicio**. Oracle funciona, pero el Firewall bloquea la entrada.
 
-### Evidencia 4 — Ping correcto y puerto bloqueado
-
-![Evidencia 4 - Puerto bloqueado](img/evidencia_04_puerto_bloqueado.png)
 
 ## 8. Solución — Regla de Firewall TCP 1521
 
@@ -81,21 +68,11 @@ No se desactiva el Firewall: se crea **una excepción concreta**.
 3. TCP → puerto local específico `1521`.
 4. Permitir la conexión → aplicar al perfil de red correspondiente → asignar nombre.
 
-### Evidencia 5 — Regla de Firewall
-
-![Evidencia 5 - Regla de Firewall](img/evidencia_05_regla_firewall.png)
-
-### Evidencia 6 — Acceso desde el cliente funcionando
-
-![Evidencia 6 - Puerto abierto](img/evidencia_06_puerto_abierto.png)
 
 ## 9. Snapshot final
 
 Con la VM apagada correctamente se creó `S3_Oracle_Servidor_Red_OK`.
 
-### Evidencia 7 — Snapshot
-
-![Evidencia 7 - Snapshot](img/evidencia_07_snapshot.png)
 
 ## 10. Resultado del reto
 
